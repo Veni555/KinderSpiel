@@ -1,17 +1,12 @@
-var saveButton=document.getElementById('save');
-var canvas = document.getElementById('canvas');
-var data = canvas.toDataURL();
-saveButton.addEventListener('click',saveImage);
 
-function saveImage(){
-  var request= new XMLHttpRequest();  
-    request.onreadystatechange=function(){
-        if(request.readyState==4 && request.status==200){
-            var response=request.responseText;
-      window.open(response,'_blank', 'location=0, menubar=0');
-        }
-    }
-    request.open('POST', 'save.php', true);
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    request.send('img='+data);
-}
+function dlCanvas() {
+  var dt = canvas.toDataURL('image/png');
+  /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
+  dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+
+  /* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
+  dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png');
+
+  this.href = dt;
+};
+document.getElementById("dl").addEventListener('click', dlCanvas, false);
