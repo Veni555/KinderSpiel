@@ -3,9 +3,20 @@ var context = canvas.getContext("2d");
 
 context.canvas.width  = window.innerWidth;
 context.canvas.height = window.innerHeight;
-
 context.lineWidth = 5 ;
 var down=false;
+
+
+// touch is supported or not
+var touchable = 'createTouch' in document;
+
+if (touchable) {
+  canvas.addEventListener('touchstart', onTouchStart, false)
+  canvas.addEventListener('touchmove', onTouchMove, false)
+}
+
+var lastX;
+var lastY;
 
 canvas.addEventListener('mousemove',draw);
 
@@ -15,6 +26,10 @@ canvas.addEventListener('mousedown',function(){
     context.moveTo(xPos,yPos);
     canvas.addEventListener('mousemove',draw);
 });
+canvas.addEventListener('mouseup', function(){
+  down=false;
+});
+
 
 function draw(e){
     xPos=e.clientX-canvas.offsetLeft;
@@ -24,9 +39,6 @@ function draw(e){
         context.stroke();
     }
 }
-canvas.addEventListener('mouseup', function(){
-    down=false;
-});
 
 function changeColor(color){
     context.strokeStyle=color;
@@ -66,13 +78,37 @@ function ajax_json_gallery(folder){
     hr.send("folder="+folder);
     thumbnailbox.innerHTML = "requesting...";
 }
+
+
+
 function putinframe(src){
+  var image = new Image();
+  image.src = src;
+  context.drawImage(image, 0, 0, 800,500);
+}
 
- var image = new Image();
+function onTouchStart(event) {
+  event.preventDefault();
+  lastX=event.touches[0].clientX;
+  lastY=event.touches[0].clientY;
+}
 
-image.src = src;
+function onTouchMove(event) {
+  try {
+    event.preventDefault();
+    drawLine(lastX,lastY,event.touches[0].clientX,event.touches[0].clientY);
+    lastX=event.touches[0].clientX;
+    lastY=event.touches[0].clientY;
+  } catch(err) {
+    alert( err.description);
+  }
+}
 
-context.drawImage(image, 0, 0, 800,500);
 
-
+function drawLine(startX,startY,endX,endY) {
+  context.beginPath();
+  // context.lineCap="round";
+  context.moveTo(startX-200,startY-30);
+  context.lineTo(endX-200,endY-30);
+  context.stroke();
 }
