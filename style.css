@@ -1,55 +1,62 @@
 *{
-    margin:0;
-    padding:0;
-    overflow: hidden;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
- body {
-    overflow-y:hidden;
-}   
+ body,html {
+  width:  100%;
+  height: 100%;
+  overflow-y:hidden;
+  box-sizing: border-box;
+}
 
 section{
-    border: 5px solid black;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
-    
+  display: flex;
+  flex-wrap: nowrap;
+  border: 5px solid black;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 #gallery{
-    float: left;
-    width: 15em;
-    height: 35em;
-/* ширина нашего блока */
-background: #fff; /* цвет фона, белый */
-border: 1px solid #C1C1C1; /* размер и цвет границы блока */
-overflow-x: scroll; /* прокрутка по горизонтали */
-overflow-y: scroll; /* прокрутка по вертикали */
-	
+  width: 15em;
+  height: calc(100vh - 50px);
+  margin-left: 10px;
+  margin-right: 10px;
+  /* ширина нашего блока */
+  background: #fff; /* цвет фона, белый */
+  border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+  overflow-x: scroll; /* прокрутка по горизонтали */
+  overflow-y: scroll; /* прокрутка по вертикали */
+
 }
 canvas{
-    display:block;
-    border: 1px solid black;
-    margin:10px auto 0px;
-    
+  display:block;
+  border: 1px solid black;
+  width: calc(100vw - 20px);
+  height: calc(100vh - 80px);
 }
 
 button{
-    outline:0;
-    border:0;
+  outline:0;
+  border:0;
 }
 
-#drawingTools{
-    width:60%;
-    height:80px;
-    margin-left: 24em;
+#paintingContainer {
+  flex-grow: 3;
+  width: auto;
+  height: 100%;
+  margin-right: 10px;
 }
 
 #colors{
     width:100%;
     height:20px;
-    
+
 }
 
 #colors button{
@@ -80,7 +87,7 @@ button{
 #otherTools{
     width:100%;
     height:60px;
-   
+
 }
 
 #otherTools button{
@@ -96,30 +103,30 @@ button{
     opacity: 0.5;
 }
 
-div#pagetop { 
+div#pagetop {
     position:fixed;
     background: #333;
-    font-size:36px; 
-    width:100%; 
+    font-size:36px;
+    width:100%;
     border-bottom:#000 1px solid;
 }
 
 
-div#thumbnailbox { 
-    float:left; 
-    width:120px; 
-    background:#292929; 
+div#thumbnailbox {
+    float:left;
+    width:120px;
+    background:#292929;
 }
 
-div#thumbnailbox > div { 
+div#thumbnailbox > div {
     width:100px;
-    height:80px; 
-    overflow:hidden; 
-    cursor:pointer; 
+    height:80px;
+    overflow:hidden;
+    cursor:pointer;
 }
 
 div#thumbnailbox > div > img {
-    width:100px; 
+    width:100px;
 }
 
 
