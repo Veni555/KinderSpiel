@@ -1,11 +1,13 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-
+var fillColor = document.getElementById("fillColor");
 context.canvas.width  = window.innerWidth;
 context.canvas.height = window.innerHeight;
 context.lineWidth = 5 ;
+context.strokeStyle =fillColor.value;
+context.fillStyle=fillColor.value;
 var down=false;
-
+ fillColor.addEventListener("input", changeFillStyle, false);
 
 // touch is supported or not
 var touchable = 'createTouch' in document;
@@ -31,7 +33,23 @@ canvas.addEventListener('mouseup', function(){
 });
 
 
+
+ function downloadImage()
+            {
+                var link = document.getElementById('link');
+  link.setAttribute('download', 'My drawing.png');
+  link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+  link.click();
+            }
+
+function changeFillStyle() {
+    context.strokeStyle = this.value;
+     context.fillStyle = this.value;
+    event.stopPropagation();
+}
+
 function draw(e){
+    
     xPos=e.clientX-canvas.offsetLeft;
     yPos=e.clientY-canvas.offsetTop;
     if(down==true){
@@ -112,3 +130,45 @@ function drawLine(startX,startY,endX,endY) {
   context.lineTo(endX-200,endY-30);
   context.stroke();
 }
+
+function changeBrushSize(size){
+    context.lineWidth=size;
+}
+function fillCanvas(){
+    context.fillRect(0,0,canvas.width,canvas.height);
+}
+
+function changeBrushStyle(brushStyle) {
+    context.lineCap=brushStyle;
+}
+
+function triggerClick() {
+    document.getElementById('file').click();
+}
+
+document.getElementById('file').addEventListener('change', function(e){
+    URL=URL || webkitURL;
+   var temp=URL.createObjectURL(e.target.files[0]);
+    var image=new Image();
+    image.src=temp;
+    image.addEventListener('load', function(){
+        imageWidth=image.naturalWidth; 
+        imageHeight=image.naturalHeight;
+        newImageWidth=imageWidth;
+        newImageHeight=imageHeight;
+        originalImageRatio=imageWidth / imageHeight;
+        if(newImageWidth>newImageHeight && newImageWidth > 800){
+            newImageWidth=800;
+            newImageHeight=800 / originalImageRatio;
+        }
+        
+         if((newImageWidth >= newImageHeight || newImageHeight >= newImageWidth) && newImageHeight > 600){
+            newImageHeight=600;
+            newImageWidth=600 * originalImageRatio;
+        }
+        
+        
+            context.drawImage(image,0,0,800,600);
+        URL.revokeObjectURL(temp);
+                           });
+});
