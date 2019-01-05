@@ -3,18 +3,20 @@
   padding:0;
   overflow: hidden;
   box-sizing: border-box;
+  
 }
  body,html {
   width:  100%;
   height: 100%;
   overflow-y:hidden;
   box-sizing: border-box;
+       background-color: #D3D3D3;
 }
 
 section{
   display: flex;
   flex-wrap: nowrap;
-  border: 5px solid black;
+  border: 1px solid black;
   width: 100%;
   height: 100vh;
   padding-top: 20px;
@@ -23,12 +25,13 @@ section{
 }
 
 #gallery{
+    position: fixed;
   width: 15em;
   height: calc(100vh - 50px);
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 2px;
   /* ширина нашего блока */
-  background: #fff; /* цвет фона, белый */
+  background: #F8F8FF; /* цвет фона, белый */
   border: 1px solid #C1C1C1; /* размер и цвет границы блока */
   overflow-x: scroll; /* прокрутка по горизонтали */
   overflow-y: scroll; /* прокрутка по вертикали */
@@ -50,7 +53,8 @@ button{
   flex-grow: 3;
   width: auto;
   height: 100%;
-  margin-right: 10px;
+  margin-right: 2px;
+    margin-left: 16em;
 }
 
 #colors{
@@ -86,7 +90,7 @@ button{
 
 #otherTools{
     width:100%;
-    height:150px;
+    height:50px;
 
 }
 
@@ -103,6 +107,19 @@ button{
     opacity: 0.5;
 }
 
+#otherTools1 button{
+    width:16.66%;
+    height:50px;
+    margin-top: 5px;
+    background: #303030;
+    color: white;
+    cursor:pointer;
+    float:left;
+}
+#otherTools1 button:hover{
+    opacity: 0.5;
+}
+
 div#pagetop {
     position:fixed;
     background: #333;
@@ -114,7 +131,7 @@ div#pagetop {
 div#thumbnailbox {
     float:left;
     width:150px;
-    background:#292929;
+    background:#F8F8FF;
 }
 
 div#thumbnailbox > div {
@@ -155,6 +172,7 @@ div#thumbnailbox > div > img {
 
 #file{
     visibility: hidden;
+    width: 0px;
 }
 
 .button {
@@ -176,4 +194,77 @@ a {
     height: 30px;
     width: 60px;
     border: 1px solid #000;
+}
+
+#save {
+    float: right;
+    height: 30px;
+    padding: 8px;
+    background-color: darkgray;
+}
+
+#save:hover {
+    background-color:beige;
+}
+
+#container { 
+  
+	background-color: #F8F8FF;
+	width: 75%;
+	float:right;
+    
+    
+    
+}
+
+#zweite_spalte {
+	background-color: #F8F8FF;
+
+	width: 25%;
+}
+
+#zweite_spalte_button {
+   position: absolute;
+    margin-bottom: 500px;
+    margin-left: 250px;
+   
+    
+}
+
+#maedchen{
+  
+    margin-right: 5px;
+    width: 60px;
+    height: 60px;
+}
+#junge{
+    
+    margin-right: 5px;
+    
+    width: 60px;
+    height: 60px;
+}
+#design{
+   margin: 5px;
+    margin-right: 5px;
+    
+    margin-left: 10px;
+}
+#animation_button{
+    position: relative;
+    float: right;
+    margin: 10px;
+    width: 100px;
+    height:50px;
+}
+
+#landschaft,#weather,#buildings,#myGallery{
+   width:10%;
+    height:40px;
+    margin-top: 5px;
+    background: #303030;
+    color: white;
+    cursor:pointer;
+    float:right;
+    visibility: hidden;
 }

@@ -146,29 +146,3 @@ function triggerClick() {
     document.getElementById('file').click();
 }
 
-document.getElementById('file').addEventListener('change', function(e){
-    URL=URL || webkitURL;
-   var temp=URL.createObjectURL(e.target.files[0]);
-    var image=new Image();
-    image.src=temp;
-    image.addEventListener('load', function(){
-        imageWidth=image.naturalWidth; 
-        imageHeight=image.naturalHeight;
-        newImageWidth=imageWidth;
-        newImageHeight=imageHeight;
-        originalImageRatio=imageWidth / imageHeight;
-        if(newImageWidth>newImageHeight && newImageWidth > 800){
-            newImageWidth=800;
-            newImageHeight=800 / originalImageRatio;
-        }
-        
-         if((newImageWidth >= newImageHeight || newImageHeight >= newImageWidth) && newImageHeight > 600){
-            newImageHeight=600;
-            newImageWidth=600 * originalImageRatio;
-        }
-        
-        
-            context.drawImage(image,0,0,800,600);
-        URL.revokeObjectURL(temp);
-                           });
-});
