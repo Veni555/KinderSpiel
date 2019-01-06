@@ -243,8 +243,8 @@ function putinframe(src){
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
     
@@ -258,9 +258,9 @@ function putinframe(src){
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
     
 
@@ -475,8 +475,8 @@ var width = window.innerWidth;
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
     
@@ -490,9 +490,9 @@ var width = window.innerWidth;
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
     
 
@@ -672,8 +672,8 @@ for (i = 0; i < x.length; i++) {
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
    
@@ -686,9 +686,9 @@ for (i = 0; i < x.length; i++) {
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
    
 
@@ -712,7 +712,6 @@ for (i = 0; i < x.length; i++) {
                 document.getElementById('buildings').style.visibility = "visible";
                 document.getElementById('weather').style.visibility = "visible";
                 document.getElementById('myGallery').style.visibility = "visible";
-                yodaGroup.clearCache();
                 }
                 function uploadEXGallery(phpDatei){
                var dataURL = stage.toDataURL();
