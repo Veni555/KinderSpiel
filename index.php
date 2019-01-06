@@ -35,13 +35,10 @@
          <button id="maedchen" ><img width="40" height="40" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/girl.png"  />Girl</button>
                <button id="junge" >
                    <img width="40" height="40" src="https://www.emoji.co.uk/files/apple-emojis/smileys-people-ios/119-boy.png"  />Boy</button>
-        <label>Fill Color: <input id="fillColor" type="color" value="#24B0D5"></label>
-             <button id="animation_button" >Animate</button>
+        
+             
             
-              <button id="landschaft" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
-              <button id="weather" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
-              <button id="buildings" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
-              <button id="myGallery" onclick="uploadEXGallery('upload_data.php')">My Gallery</button> 
+              
               </div>
     </div>
             
@@ -51,22 +48,31 @@
             <form method="post" accept-charset="utf-8" name="form1">
             <input name="hidden_data" id='hidden_data' type="hidden"/>
         </form>
+            <div id="wrapper1">
           <div id="otherTools">
             <button id="clearCanvas" onclick="clearCanvas()">C</button>
               <button id="brushSize1" onclick="changeBrushSize(5)">1</button>
               <button id="brushSize2" onclick="changeBrushSize(20)">2</button>
               <button id="brushSize3" onclick="changeBrushSize(30)">3</button>
-              <button id="brushSize4" onclick="changeBrushSize(40)">4</button><br/>
-              
-          </div>
-            <div  id="otherTools1">
-                  <button id="fillCanvas" onclick="fillCanvas()">F</button>
+              <button id="brushSize4" onclick="changeBrushSize(40)">4</button>
+            <button id="fillCanvas" onclick="fillCanvas()">F</button>
               <button id="buttBrush" onclick="changeBrushStyle('butt')">Butt</button>
               <button id="squareBrush" onclick="changeBrushStyle('square')">Square</button>
               <button id="roundBrush" onclick="changeBrushStyle('round')">Round</button>
+              <input id="fillColor" type="color" value="#24B0D5">
+              
+          </div>
+            <div  id="otherTools1">
+                
               <button id="openFile" onclick="triggerClick()">Open</button>
-               <button id="uploadFile" onclick="uploadEx()">Download</button></div>
-        </div>
+               <button id="uploadFile" onclick="uploadEx()">Download</button>
+            <button id="animation_button" >Animate</button>
+                
+            </div>
+            <button id="landschaft" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
+              <button id="weather" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
+              <button id="buildings" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
+              <button id="myGallery" onclick="uploadEXGallery('upload_data.php')">My Gallery</button> </div></div>
           <div id="wrapper">
               
     <div id="container">
@@ -237,8 +243,8 @@ function putinframe(src){
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
     
@@ -252,9 +258,9 @@ function putinframe(src){
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
     
 
@@ -469,8 +475,8 @@ var width = window.innerWidth;
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
     
@@ -484,9 +490,9 @@ var width = window.innerWidth;
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
     
 
@@ -666,8 +672,8 @@ for (i = 0; i < x.length; i++) {
 
     // yoda
     var yodaImg = new Konva.Image({
-        width: 93,
-        height: 104
+        width: 293,
+        height: 356
     });
 
    
@@ -680,9 +686,9 @@ for (i = 0; i < x.length; i++) {
     layer.add(yodaGroup);
     yodaGroup.add(yodaImg);
     addAnchor(yodaGroup, 0, 0, 'topLeft');
-    addAnchor(yodaGroup, 93, 0, 'topRight');
-    addAnchor(yodaGroup, 93, 104, 'bottomRight');
-    addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+    addAnchor(yodaGroup, 293, 0, 'topRight');
+    addAnchor(yodaGroup, 293, 356, 'bottomRight');
+    addAnchor(yodaGroup, 0, 356, 'bottomLeft');
 
    
 
