@@ -3,14 +3,14 @@
   padding:0;
   overflow: hidden;
   box-sizing: border-box;
-  
+
 }
  body,html {
   width:  100%;
   height: 100%;
   overflow-y:hidden;
   box-sizing: border-box;
-       background-color: #D3D3D3;
+  background-color: #D3D3D3;
 }
 
 section{
@@ -97,7 +97,7 @@ button{
 #otherTools button{
     width:20%;
     height:50px;
-    
+
     background: #303030;
     color: white;
     cursor:pointer;
@@ -107,7 +107,7 @@ button{
 #otherTools input{
     width:20%;
     height:50px;
-    
+
     background: #303030;
     color: white;
     cursor:pointer;
@@ -159,29 +159,29 @@ div#thumbnailbox > div {
 div#thumbnailbox > div > img {
     width:100px;
 }
-#clearCanvas{ 
+#clearCanvas{
     font:25px impact;
 }
-#brushSize1{ 
+#brushSize1{
     font:10px impact;
 }
-#brushSize2{ 
+#brushSize2{
     font:20px impact;
 }
-#brushSize3{ 
+#brushSize3{
     font:30px impact;
 }
-#brushSize4{ 
+#brushSize4{
     font:40px impact;
 }
-#fillCanvas{ 
+#fillCanvas{
     font:25px impact;
 }
-#buttBrush,#squareBrush,#roundBrush{ 
+#buttBrush,#squareBrush,#roundBrush{
     font:18px existence;
 }
 
-#otherTools #openFile{ 
+#otherTools #openFile{
     font:25px existence;
 }
 
@@ -192,7 +192,7 @@ div#thumbnailbox > div > img {
 
 .button {
   font: bold 20px Arial;
-  
+
   text-decoration: none;
   background-color: #EEEEEE;
   color: #333333;
@@ -201,7 +201,7 @@ div#thumbnailbox > div > img {
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
-  
+
 }
 
 a {
@@ -222,14 +222,14 @@ a {
     background-color:beige;
 }
 
-#container { 
-  
+#container {
+
 	background-color: #F8F8FF;
 	width: 75%;
 	float:right;
-    
-    
-    
+
+
+
 }
 
 #zweite_spalte {
@@ -242,27 +242,27 @@ a {
    position: absolute;
     margin-bottom: 500px;
     margin-left: 250px;
-   
-    
+
+
 }
 
 #maedchen{
-  
+
     margin-right: 5px;
     width: 60px;
     height: 60px;
 }
 #junge{
-    
+
     margin-right: 5px;
-    
+
     width: 60px;
     height: 60px;
 }
 #design{
    margin: 5px;
     margin-right: 5px;
-    
+
     margin-left: 10px;
 }
 

@@ -49,7 +49,7 @@ function changeFillStyle() {
 }
 
 function draw(e){
-    
+
     xPos=e.clientX-canvas.offsetLeft;
     yPos=e.clientY-canvas.offsetTop;
     if(down==true){
@@ -126,8 +126,8 @@ function onTouchMove(event) {
 function drawLine(startX,startY,endX,endY) {
   context.beginPath();
   // context.lineCap="round";
-  context.moveTo(startX-200,startY-30);
-  context.lineTo(endX-200,endY-30);
+  context.moveTo(startX-250,startY-210);
+  context.lineTo(endX-250,endY-210);
   context.stroke();
 }
 
