@@ -52,36 +52,38 @@
 
           <div id="drawingTools">
 
-            <form method="post" accept-charset="utf-8" name="form1">
+            <!-- <form method="post" accept-charset="utf-8" name="form1">
               <input name="hidden_data" id='hidden_data' type="hidden"/>
-            </form>
-
-            <div id="wrapper1">
-              <div id="otherTools">
-                <button id="clearCanvas" onclick="clearCanvas()">C</button>
-                <button id="brushSize1" onclick="changeBrushSize(5)">1</button>
-                <button id="brushSize2" onclick="changeBrushSize(20)">2</button>
-                <button id="brushSize3" onclick="changeBrushSize(30)">3</button>
-                <button id="brushSize4" onclick="changeBrushSize(40)">4</button>
-                <button id="fillCanvas" onclick="fillCanvas()">F</button>
+            </form> -->
+            <div id="otherTools">
+              <div id="upperTools">
+                <input id="fillColor" type="color" value="#24B0D5">
+                <button id="brushSize1" onclick="changeBrushSize(5)"><div></div></button>
+                <button id="brushSize2" onclick="changeBrushSize(20)"><div></div></button>
+                <button id="brushSize3" onclick="changeBrushSize(30)"><div></div></button>
+                <button id="brushSize4" onclick="changeBrushSize(40)"><div></div></button>
+              </div>
+              <div id="lowerTools">
+                <button id="clearCanvas" onclick="clearCanvas()"><i class="fas fa-eraser"></i></button>
+                <button id="fillCanvas" onclick="fillCanvas()"><i class="fas fa-fill-drip"></i></button>
                 <button id="buttBrush" onclick="changeBrushStyle('butt')">Butt</button>
                 <button id="squareBrush" onclick="changeBrushStyle('square')">Square</button>
                 <button id="roundBrush" onclick="changeBrushStyle('round')">Round</button>
-                <input id="fillColor" type="color" value="#24B0D5">
               </div>
 
-              <div id="otherTools1">
-                <button id="openFile" onclick="triggerClick()">Open</button>
-                <button id="uploadFile" onclick="uploadEx()">Download</button>
-                <button id="animation_button" >Animate</button>
-              </div>
-
-              <button id="landschaft" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
-              <button id="weather" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
-              <button id="buildings" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
-              <button id="myGallery" onclick="uploadEXGallery('upload_data.php')">My Gallery</button>
             </div>
-            <!-- end of #wrapper1  -->
+
+            <div id="otherTools1">
+              <button id="openFile" onclick="triggerClick()">Open</button>
+              <button id="uploadFile" onclick="uploadEx()">Download</button>
+              <button id="animation_button" >Animate</button>
+            </div>
+
+            <button id="landschaft" class="downloadSetting" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
+            <button id="weather" class="downloadSetting" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
+            <button id="buildings" class="downloadSetting" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
+            <button id="myGallery" class="downloadSetting" onclick="uploadEXGallery('upload_data.php')">My Gallery</button>
+
           </div>
           <!-- end of #drawingTools -->
 

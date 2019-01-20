@@ -32,6 +32,18 @@ section{
   box-sizing: border-box;
 }
 
+canvas{
+  display:block;
+  /* border: 1px solid black; */
+  width: calc(100vw - 20px);
+  height: calc(100vh - 80px);
+}
+
+button{
+  outline:0;
+  border:0;
+}
+
 /* ========= banner ========= */
 
 #banner {
@@ -39,7 +51,7 @@ section{
   height: 90px;
   display: block;
   position: relative;
-  margin: 0 10px 10px;
+  margin: 0 10px;
   font-size: 2rem;
   font-family: 'Sigmar One', cursive;
   color: #b2dfdb;
@@ -69,26 +81,13 @@ section{
   height: 70px;
   width: 70px;
   background: none;
+  cursor: pointer;
 }
 
 #design button img {
-  width: 50px;
+  width: 55px;
   height: auto;
 }
-
-/* #girl{
-  margin-right: 5px;
-  width: 50px;
-  height: 50px;
-}
-
-#boy{
-  margin-right: 5px;
-  width: 50px;
-  height: 50px;
-} */
-
-
 
 /* ========= content container ========= */
 
@@ -143,109 +142,139 @@ section{
 }
 
 
-canvas{
-  display:block;
-  border: 1px solid black;
-  width: calc(100vw - 20px);
-  height: calc(100vh - 80px);
-}
-
-button{
-  outline:0;
-  border:0;
-}
+/* ===== paiting container ==== */
 
 #paintingContainer {
   flex-grow: 3;
   width: auto;
-  height: 100%;
-  margin-right: 2px;
+  height: calc(100vh - 115px);
+  margin-right: 10px;
 }
 
-#colors{
-  width:100%;
-  height:20px;
-
+#drawingTools {
+  margin-bottom: 5px;
 }
 
-#colors button{
-    width:20%;
-    height:10px;
-    margin-top:5px;
-    float:left;
-}
-#black{
-    background-color: black;
-}
-#yellow{
-    background-color: yellow;
-}
-#pink{
-    background-color: pink;
-}
-#green{
-    background-color: green;
-}
-#blue{
-    background-color: blue;
-}
-#colors button:hover{
-    opacity: 0.5;
-}
+/* == otherTools == */
 
 #otherTools{
-    width:25%;
-    float:left;
-
+  width: 30%;
+  height: 95px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-between;
 }
 
 #otherTools button{
-    width:20%;
-    height:50px;
+  flex-grow: 1;
+  margin-right: 3px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+#upperTools, #lowerTools {
+  display: flex;
+  justify-content: space-between;
+}
+
+#otherTools button:hover{
+  opacity: 0.5;
+}
+
+#otherTools button div {
+  background: #BD3E31;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
 }
 
 #otherTools input{
-    width:20%;
-    height:50px;
+  margin-right: 3px;
+  width: 70px;
+  height: 45px;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  background-color: #ffecb3;
+  cursor:pointer;
+}
 
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+#otherTools button i {
+  font-size: 1.5rem;
 }
-#otherTools button:hover{
-    opacity: 0.5;
+
+#brushSize1 div {
+  width: 8px;
+  height: 8px;
 }
+#brushSize2 div {
+  width: 15px;
+  height: 15px;
+}
+#brushSize3 div {
+  width: 23px;
+  height: 23px;
+}
+#brushSize4 div {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* == otherTools1 == */
+
 #otherTools1{
-    width:75%;
-    float:right;
+  width:70%;
+  float:right;
+  display: flex;
+  justify-content: space-between;
+}
 
-}
 #otherTools1 button{
-    width:33.33%;
- height: 50px;
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+  width: auto;
+  height: 45px;
+  flex-grow: 1;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
 #otherTools1 button:hover{
-    opacity: 0.5;
+  opacity: 0.5;
 }
-#savefunctions button{
-    width: 25%;
+
+.downloadSetting {
+  margin-top: 5px;
+  width:17.5%;
+  height: 45px;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1.3rem;
+  cursor: pointer;
+  float:left;
+  visibility: hidden;
 }
-div#pagetop {
-    position:fixed;
-    background: #333;
-    width:100%;
-    border-bottom:#000 1px solid;
+
+.downloadSetting:hover {
+  opacity: 0.5;
 }
+
 
 
 div#thumbnailbox {
@@ -255,47 +284,38 @@ div#thumbnailbox {
 }
 
 div#thumbnailbox > div {
-    width:150px;
-    height:80px;
-    overflow:hidden;
-    cursor:pointer;
+  width:150px;
+  height:80px;
+  overflow:hidden;
+  cursor:pointer;
 }
 
 div#thumbnailbox > div > img {
     width:100px;
 }
+
+
 #clearCanvas{
-    font:25px impact;
+  font:25px impact;
 }
-#brushSize1{
-    font:10px impact;
-}
-#brushSize2{
-    font:20px impact;
-}
-#brushSize3{
-    font:30px impact;
-}
-#brushSize4{
-    font:40px impact;
-}
+
 #fillCanvas{
-    font:25px impact;
+  font:25px impact;
 }
 #buttBrush,#squareBrush,#roundBrush{
     font:18px existence;
 }
 
 #otherTools #openFile{
-    font:25px existence;
+  font:25px existence;
 }
 
 #file{
-    visibility: hidden;
-    width: 0px;
+  visibility: hidden;
+  width: 0px;
 }
 
-.button {
+/* .button {
   font: bold 20px Arial;
 
   text-decoration: none;
@@ -317,59 +337,44 @@ a {
 }
 
 #save {
-    float: right;
-    height: 30px;
-    padding: 8px;
-    background-color: darkgray;
+  float: right;
+  height: 30px;
+  padding: 8px;
+  background-color: darkgray;
 }
 
 #save:hover {
     background-color:beige;
+} */
+
+#wrapper {
+  height: calc(100% - 110px);
+  box-sizing: border-box;
 }
 
 #container {
-
-	background-color: #F8F8FF;
-	width: 75%;
-	float:right;
+  height: 100%;
+  margin-right: -5px;
+	width: 70%;
+  float: right;
+  background-color: #F8F8FF;
+  border: none;
 }
 
 #zweite_spalte {
+  margin-right: 3px;
+  height: 100%;
 	background-color: #F8F8FF;
-
-	width: 25%;
+  width: 30%;
+  border: none;
 }
 
 #zweite_spalte_button {
-   position: absolute;
-    margin-bottom: 500px;
-    margin-left: 250px;
-
-
+  position: absolute;
+  margin-bottom: 500px;
+  margin-left: 250px;
 }
 
 
 
 
-#landschaft,#weather,#buildings,#myGallery{
-   width:18.75%;
-    height: 50px;
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
-    visibility: hidden;
-}
-
-#landschaft:hover{
-    opacity: 0.5;
-}
-#weather:hover{
-    opacity: 0.5;
-}
-#buildings:hover{
-    opacity: 0.5;
-}
-#myGallery:hover{
-    opacity: 0.5;
-}

@@ -25,7 +25,7 @@ canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mousedown', function () {
   down = true;
   context.beginPath();
-  context.moveTo(xPos, yPos);
+  context.moveTo(xPos, yPos - 80);
   canvas.addEventListener('mousemove', draw);
 });
 canvas.addEventListener('mouseup', function () {
@@ -48,9 +48,9 @@ function changeFillStyle() {
 
 function draw(e) {
   xPos = e.clientX - canvas.offsetLeft;
-  yPos = e.clientY - canvas.offsetTop;
+  yPos = e.clientY - canvas.offsetTop ;
   if (down == true) {
-    context.lineTo(xPos, yPos);
+    context.lineTo(xPos, yPos - 80);
     context.stroke();
   }
 }
