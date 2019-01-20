@@ -7,6 +7,7 @@
     <meta name="" content="">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <script src="https://unpkg.com/konva@2.4.2/konva.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script src="https://rawgit.com/konvajs/greensock-plugin/master/KonvaPlugin.js"></script>
@@ -19,84 +20,92 @@
 
     <section>
 
-      <div id="gallery">
-        <div id="albummenubox">
-          <h3>My Photo Albums</h3>
-          <a href="#" onclick="return false" onmousedown="ajax_json_gallery('images1')">Landschaft</a><br>
-          <a href="#" onclick="return false" onmousedown="ajax_json_gallery('images2')">Weather</a><br>
-          <a href="#" onclick="return false" onmousedown="ajax_json_gallery('images3')">Buildings</a><br>
-          <a href="#" onclick="return false" onmousedown="ajax_json_gallery('upload')">My Gallery</a><br>
+      <div id="banner">
+        <img src="./images/palette.png" />
+        <h1>Painting World</h1>
+
+        <div id="design">
+          <button id="girl" >
+            <img src="./images/girl.png"  />
+          </button>
+          <button id="boy" >
+            <img src="./images/boy.png"  />
+          </button>
         </div>
-        <div id="thumbnailbox"></div>
+
       </div>
 
-      <div id="paintingContainer">
+      <div id="contentContainer">
 
-        <div id="drawingTools">
-
-          <div class="lightBorder">
-            <div id="design">
-              <button id="maedchen" >
-                <img width="40" height="40" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/girl.png"  />Girl
-              </button>
-              <button id="junge" >
-                <img width="40" height="40" src="https://www.emoji.co.uk/files/apple-emojis/smileys-people-ios/119-boy.png"  />Boy
-              </button>
-            </div>
+        <div id="gallery">
+          <div id="albummenubox">
+            <h3>Photo Albums</h3>
+            <a class="galleryBtn" href="#" onclick="return false" onmousedown="ajax_json_gallery('images1')">Landschaft</a>
+            <a class="galleryBtn" href="#" onclick="return false" onmousedown="ajax_json_gallery('images2')">Weather</a>
+            <a class="galleryBtn" href="#" onclick="return false" onmousedown="ajax_json_gallery('images3')">Buildings</a>
+            <a class="galleryBtn" href="#" onclick="return false" onmousedown="ajax_json_gallery('upload')">My Gallery</a>
           </div>
-
-          <form method="post" accept-charset="utf-8" name="form1">
-            <input name="hidden_data" id='hidden_data' type="hidden"/>
-          </form>
-
-          <div id="wrapper1">
-            <div id="otherTools">
-              <button id="clearCanvas" onclick="clearCanvas()">C</button>
-              <button id="brushSize1" onclick="changeBrushSize(5)">1</button>
-              <button id="brushSize2" onclick="changeBrushSize(20)">2</button>
-              <button id="brushSize3" onclick="changeBrushSize(30)">3</button>
-              <button id="brushSize4" onclick="changeBrushSize(40)">4</button>
-              <button id="fillCanvas" onclick="fillCanvas()">F</button>
-              <button id="buttBrush" onclick="changeBrushStyle('butt')">Butt</button>
-              <button id="squareBrush" onclick="changeBrushStyle('square')">Square</button>
-              <button id="roundBrush" onclick="changeBrushStyle('round')">Round</button>
-              <input id="fillColor" type="color" value="#24B0D5">
-            </div>
-
-            <div id="otherTools1">
-              <button id="openFile" onclick="triggerClick()">Open</button>
-              <button id="uploadFile" onclick="uploadEx()">Download</button>
-              <button id="animation_button" >Animate</button>
-            </div>
-
-            <button id="landschaft" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
-            <button id="weather" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
-            <button id="buildings" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
-            <button id="myGallery" onclick="uploadEXGallery('upload_data.php')">My Gallery</button>
-          </div>
-          <!-- end of #wrapper1  -->
+          <div id="thumbnailbox"></div>
         </div>
-        <!-- end of #drawingTools -->
 
+        <div id="paintingContainer">
 
-        <div id="wrapper">
+          <div id="drawingTools">
 
-          <div id="container">
-            <canvas id="canvas1"></canvas>
-          </div>
+            <form method="post" accept-charset="utf-8" name="form1">
+              <input name="hidden_data" id='hidden_data' type="hidden"/>
+            </form>
 
-          <div id="zweite_spalte">
-            <div id="zweite_spalte_button">
-              <button>Add</button>
+            <div id="wrapper1">
+              <div id="otherTools">
+                <button id="clearCanvas" onclick="clearCanvas()">C</button>
+                <button id="brushSize1" onclick="changeBrushSize(5)">1</button>
+                <button id="brushSize2" onclick="changeBrushSize(20)">2</button>
+                <button id="brushSize3" onclick="changeBrushSize(30)">3</button>
+                <button id="brushSize4" onclick="changeBrushSize(40)">4</button>
+                <button id="fillCanvas" onclick="fillCanvas()">F</button>
+                <button id="buttBrush" onclick="changeBrushStyle('butt')">Butt</button>
+                <button id="squareBrush" onclick="changeBrushStyle('square')">Square</button>
+                <button id="roundBrush" onclick="changeBrushStyle('round')">Round</button>
+                <input id="fillColor" type="color" value="#24B0D5">
+              </div>
+
+              <div id="otherTools1">
+                <button id="openFile" onclick="triggerClick()">Open</button>
+                <button id="uploadFile" onclick="uploadEx()">Download</button>
+                <button id="animation_button" >Animate</button>
+              </div>
+
+              <button id="landschaft" onclick="uploadEXGallery('upload_data_landschaft.php')">Nature</button>
+              <button id="weather" onclick="uploadEXGallery('upload_data_weather.php')">Weather</button>
+              <button id="buildings" onclick="uploadEXGallery('upload_data_buildings.php')">Buildings</button>
+              <button id="myGallery" onclick="uploadEXGallery('upload_data.php')">My Gallery</button>
             </div>
-            <canvas id="canvas"></canvas>
+            <!-- end of #wrapper1  -->
           </div>
-        </div>  <!-- hier ist das Ende des Elements Wrapper -->
+          <!-- end of #drawingTools -->
+
+
+          <div id="wrapper">
+
+            <div id="container">
+              <canvas id="canvas1"></canvas>
+            </div>
+
+            <div id="zweite_spalte">
+              <div id="zweite_spalte_button">
+                <button>Add</button>
+              </div>
+              <canvas id="canvas"></canvas>
+            </div>
+          </div>  <!-- hier ist das Ende des Elements Wrapper -->
+
+        </div>
+        <!-- end of paintingContainer -->
+
+        <input id="file" type="file" accept="image/*" />
 
       </div>
-      <!-- end of paintingContainer -->
-
-      <input id="file" type="file" accept="image/*" />
 
     </section>
 
