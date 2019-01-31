@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Sigmar One';
+  src : url('../font/SigmarOne-Regular.ttf');
+}
+
 *{
   margin:0;
   padding:0;
@@ -10,36 +15,26 @@
   height: 100%;
   overflow-y:hidden;
   box-sizing: border-box;
-  background-color: #D3D3D3;
+  background-color: #ffd54f;
+  font-family: 'Sigmar One', cursive;
 }
 
 section{
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
   border: 1px solid black;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
   box-sizing: border-box;
 }
 
-#gallery{
-    position: fixed;
-  width: 15em;
-  height: calc(100vh - 50px);
-  margin-left: 10px;
-  margin-right: 2px;
-  /* ширина нашего блока */
-  background: #F8F8FF; /* цвет фона, белый */
-  border: 1px solid #C1C1C1; /* размер и цвет границы блока */
-  overflow-x: scroll; /* прокрутка по горизонтали */
-  overflow-y: scroll; /* прокрутка по вертикали */
-
-}
 canvas{
   display:block;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: calc(100vw - 20px);
   height: calc(100vh - 80px);
 }
@@ -49,148 +44,278 @@ button{
   border:0;
 }
 
+/* ========= banner ========= */
+
+#banner {
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: relative;
+  margin: 0 10px;
+  font-size: 2rem;
+  font-family: 'Sigmar One', cursive;
+  color: #b2dfdb;
+  -webkit-text-stroke: 2px #3e2723;
+  /* vertical-align: middle; */
+}
+
+#banner img {
+  height: 80px;
+}
+
+#banner h1 {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#design{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  right: 20px;
+  vertical-align: baseline;
+}
+
+#design button {
+  margin-top: 10px;
+  height: 70px;
+  width: 70px;
+  background: none;
+  cursor: pointer;
+}
+
+#design button img {
+  width: 55px;
+  height: auto;
+}
+
+/* ========= content container ========= */
+
+#contentContainer {
+  display: flex;
+  position: relative;
+}
+
+#gallery {
+  display: inline-block;
+  width: 30rem;
+  height: calc(100vh - 115px);
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
+  /* ширина нашего блока */
+  background: #ffecb3;
+  /* цвет фона, белый */
+  border: 3px solid #3e2723;
+  border-radius: 8px;
+  /* размер и цвет границы блока */
+  /* overflow-x: scroll; */
+  /* прокрутка по горизонтали */
+  /* overflow-y: scroll; */
+  /* прокрутка по вертикали */
+
+}
+
+#albummenubox h3 {
+  margin: 5px auto 15px;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #3e2723;
+}
+
+#albummenubox a {
+  width: 100%;
+  height: 40px;
+  margin: 20px auto;
+  display: block;
+  text-decoration: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #BD3E31;
+  text-shadow: 2px -5px #ffcc80;
+  transition: all 0.2s;
+}
+
+#albummenubox a:hover {
+  color:#E74C3C;
+  font-size: 1.6rem;
+}
+
+
+/* ===== paiting container ==== */
+
 #paintingContainer {
   flex-grow: 3;
   width: auto;
-  height: 100%;
-  margin-right: 2px;
-    margin-left: 16em;
+  height: calc(100vh - 115px);
+  margin-right: 10px;
 }
 
-#colors{
-    width:100%;
-    height:20px;
-
+#drawingTools {
+  margin-bottom: 5px;
 }
 
-#colors button{
-    width:20%;
-    height:10px;
-    margin-top:5px;
-    float:left;
-}
-#black{
-    background-color: black;
-}
-#yellow{
-    background-color: yellow;
-}
-#pink{
-    background-color: pink;
-}
-#green{
-    background-color: green;
-}
-#blue{
-    background-color: blue;
-}
-#colors button:hover{
-    opacity: 0.5;
-}
+/* == otherTools == */
 
 #otherTools{
-    width:25%;
-    float:left;
-
+  width: 30%;
+  height: 95px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-between;
 }
 
 #otherTools button{
-    width:20%;
-    height:50px;
+  flex-grow: 1;
+  margin-right: 3px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+#upperTools, #lowerTools {
+  display: flex;
+  justify-content: space-between;
+}
+
+#otherTools button:hover{
+  opacity: 0.5;
+}
+
+#otherTools button div {
+  background: #BD3E31;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
 }
 
 #otherTools input{
-    width:20%;
-    height:50px;
+  margin-right: 3px;
+  width: 70px;
+  height: 45px;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  background-color: #ffecb3;
+  cursor:pointer;
+}
 
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+#otherTools button i {
+  font-size: 1.5rem;
 }
-#otherTools button:hover{
-    opacity: 0.5;
+
+#brushSize1 div {
+  width: 8px;
+  height: 8px;
 }
+#brushSize2 div {
+  width: 15px;
+  height: 15px;
+}
+#brushSize3 div {
+  width: 23px;
+  height: 23px;
+}
+#brushSize4 div {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* == otherTools1 == */
+
 #otherTools1{
-    width:75%;
-    float:right;
+  width:70%;
+  float:right;
+  display: flex;
+  justify-content: space-between;
+}
 
-}
 #otherTools1 button{
-    width:33.33%;
- height: 50px;
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
+  width: auto;
+  height: 45px;
+  flex-grow: 1;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
 #otherTools1 button:hover{
-    opacity: 0.5;
+  opacity: 0.5;
 }
-#savefunctions button{
-    width: 25%;
+
+.downloadSetting {
+  margin-top: 5px;
+  width:17.5%;
+  height: 45px;
+  border: 3px solid #3e2723;
+  border-radius: 5px;
+  color: #BD3E31;
+  background-color: #ffecb3;
+  font-family: 'Sigmar One', cursive;
+  font-size: 1.3rem;
+  cursor: pointer;
+  float:left;
+  visibility: hidden;
 }
-div#pagetop {
-    position:fixed;
-    background: #333;
-    width:100%;
-    border-bottom:#000 1px solid;
+
+.downloadSetting:hover {
+  opacity: 0.5;
 }
+
 
 
 div#thumbnailbox {
-    float:left;
-    width:150px;
-    background:#F8F8FF;
+  float:left;
+  color: #3e2723;
+  background: #ffecb3;
 }
 
 div#thumbnailbox > div {
-    width:150px;
-    height:80px;
-    overflow:hidden;
-    cursor:pointer;
+  width:150px;
+  height:80px;
+  overflow:hidden;
+  cursor:pointer;
 }
 
 div#thumbnailbox > div > img {
     width:100px;
 }
+
+
 #clearCanvas{
-    font:25px impact;
+  font:25px impact;
 }
-#brushSize1{
-    font:10px impact;
-}
-#brushSize2{
-    font:20px impact;
-}
-#brushSize3{
-    font:30px impact;
-}
-#brushSize4{
-    font:40px impact;
-}
+
 #fillCanvas{
-    font:25px impact;
+  font:25px impact;
 }
 #buttBrush,#squareBrush,#roundBrush{
     font:18px existence;
 }
 
 #otherTools #openFile{
-    font:25px existence;
+  font:25px existence;
 }
 
 #file{
-    visibility: hidden;
-    width: 0px;
+  visibility: hidden;
+  width: 0px;
 }
 
-.button {
+/* .button {
   font: bold 20px Arial;
 
   text-decoration: none;
@@ -212,80 +337,44 @@ a {
 }
 
 #save {
-    float: right;
-    height: 30px;
-    padding: 8px;
-    background-color: darkgray;
+  float: right;
+  height: 30px;
+  padding: 8px;
+  background-color: darkgray;
 }
 
 #save:hover {
     background-color:beige;
+} */
+
+#wrapper {
+  height: calc(100% - 110px);
+  box-sizing: border-box;
 }
 
 #container {
-
-	background-color: #F8F8FF;
-	width: 75%;
-	float:right;
-
-
-
+  height: 100%;
+  margin-right: -5px;
+	width: 70%;
+  float: right;
+  background-color: #F8F8FF;
+  border: none;
 }
 
 #zweite_spalte {
+  margin-right: 3px;
+  height: 100%;
 	background-color: #F8F8FF;
-
-	width: 25%;
+  width: 30%;
+  border: none;
 }
 
 #zweite_spalte_button {
-   position: absolute;
-    margin-bottom: 500px;
-    margin-left: 250px;
-
-
-}
-
-#maedchen{
-
-    margin-right: 5px;
-    width: 60px;
-    height: 60px;
-}
-#junge{
-
-    margin-right: 5px;
-
-    width: 60px;
-    height: 60px;
-}
-#design{
-   margin: 5px;
-    margin-right: 5px;
-
-    margin-left: 10px;
+  position: absolute;
+  margin-bottom: 500px;
+  margin-left: 250px;
 }
 
 
-#landschaft,#weather,#buildings,#myGallery{
-   width:18.75%;
-    height: 50px;
-    background: #303030;
-    color: white;
-    cursor:pointer;
-    float:left;
-    visibility: hidden;
-}
 
-#landschaft:hover{
-    opacity: 0.5;
-}
-#weather:hover{
-    opacity: 0.5;
-}
-#buildings:hover{
-    opacity: 0.5;
-}
-#myGallery:hover{
-    opacity: 0.5;
-}
+
