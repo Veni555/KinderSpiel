@@ -546,8 +546,8 @@ document.getElementById('zweite_spalte_button').addEventListener('click', functi
 }, false);
 
 
-document.getElementById('junge').addEventListener('click', function () {
-  document.querySelector("body").style.backgroundImage = "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-022.jpg')";;
+document.getElementById('boy').addEventListener('click', function () {
+  document.querySelector("body").style.backgroundImage = "url('./images/boyfill.png')";;
   document.querySelector("body").style.backgroundRepeat = 'repeat';
   document.getElementById("gallery").style.background = "#B0E0E6";
   document.getElementById("thumbnailbox").style.background = "#B0E0E6";
@@ -560,16 +560,16 @@ document.getElementById('junge').addEventListener('click', function () {
   // Set the background color of the first <p> element (index 0) in div
   var i;
   for (i = 0; i < x.length; i++) {
-    x[i].style.backgroundColor = "	#4169E1";
+    x[i].style.backgroundColor = "#4991ff";
   }
   for (i = 0; i < y.length; i++) {
-    y[i].style.backgroundColor = "	#4169E1";
+    y[i].style.backgroundColor = "#4991ff";
   }
 }, false);
 
 
-document.getElementById('maedchen').addEventListener('click', function () {
-  document.querySelector("body").style.backgroundImage = "url('https://www.have-fun-with-quilts.com/WebRoot/Store5/Shops/64266164/5207/6883/7EE8/CAC2/FB86/C0A8/28BC/E11C/zart_rosa.JPG')";;
+document.getElementById('girl').addEventListener('click', function () {
+  document.querySelector("body").style.backgroundImage = "url('./images/girlfill.png')";;
   document.querySelector("body").style.backgroundRepeat = 'repeat';
   document.getElementById("gallery").style.background = "#faebd7";
   document.getElementById("thumbnailbox").style.background = "#faebd7";
@@ -582,10 +582,10 @@ document.getElementById('maedchen').addEventListener('click', function () {
   // Set the background color of the first <p> element (index 0) in div
   var i;
   for (i = 0; i < x.length; i++) {
-    x[i].style.backgroundColor = "#F08080";
+    x[i].style.backgroundColor = "#ff95bf";
   }
   for (i = 0; i < y.length; i++) {
-    y[i].style.backgroundColor = "#F08080";
+    y[i].style.backgroundColor = "#ff95bf";
   }
 }, false);
 
