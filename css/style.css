@@ -8,7 +8,6 @@
   padding:0;
   overflow: hidden;
   box-sizing: border-box;
-
 }
  body,html {
   width:  100%;
@@ -62,7 +61,7 @@ margin-bottom: 15px;
 
 #banner img {
   height: 80px;
-    
+
 }
 
 #banner h1 {
