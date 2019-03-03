@@ -48,10 +48,11 @@ button{
 
 #banner {
   width: 100%;
-  height: 90px;
+  height: 110px;
   display: block;
   position: relative;
-  margin: 0 10px;
+margin-bottom: 15px;
+    margin-left: 15px;
   font-size: 2rem;
   font-family: 'Sigmar One', cursive;
   color: #b2dfdb;
@@ -61,6 +62,7 @@ button{
 
 #banner img {
   height: 80px;
+    
 }
 
 #banner h1 {
@@ -98,7 +100,7 @@ button{
 
 #gallery {
   display: inline-block;
-  width: 30rem;
+  width: 35rem;
   height: calc(100vh - 115px);
   margin: 0 10px;
   padding: 10px;
@@ -111,8 +113,15 @@ button{
   /* размер и цвет границы блока */
   /* overflow-x: scroll; */
   /* прокрутка по горизонтали */
-  /* overflow-y: scroll; */
+ overflow-y: scroll;
   /* прокрутка по вертикали */
+
+scrollbar-base-color: yellow;	/*(Basisfarbe der Scroll-Leiste)*/
+scrollbar-arrow-color: #3e2723;	/*(Farbe für Verschiebepfeile)*/
+scrollbar-face-color: #ffd54f;	/*(Farbe für Oberfläche)*/
+scrollbar-highlight-color: #FFCC33;	/*(Farbe für oberen und linken Rand)*/
+scrollbar-shadow-color: #FFCC33;	/*(Farbe für unteren und rechten Rand)*/
+scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
 
 }
 
