@@ -776,39 +776,20 @@ function uploadEXGallery(phpDatei) {
 }
 
 
-// var logoLink = document.getElementById("logoLink")
-// logoLink.onmouseover = function() {
-// console.log('test1')
-//   logoLink.innerHTML = '<img id="logo" src="./images/homeIcon.png" />'
-// }
 
-// logoLink.onmouseout = function() {
-//   console.log('test2')
-//   logoLink.innerHTML = `<img id="logo" src="./images/palette.png" />`
-// }
-
-// logoLink.onmouseleave = function() {
-//   console.log('test2')
-//   logoLink.innerHTML = `<img id="logo" src="./images/palette.png" />`
-// }
-
-    // function() {
-    //   logoLink.innerHTML = `${<i class="fas fa-home"></i>}`
-    // }
-
-    /*    function downloadURI(uri, name) {
-                var link = document.createElement("a");
-                link.download = name;
-                link.href = uri;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                delete link;
-            }
-     */
+/*    function downloadURI(uri, name) {
+            var link = document.createElement("a");
+            link.download = name;
+            link.href = uri;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            delete link;
+        }
+  */
 
 
-    /*document.getElementById('save').addEventListener('click', function () {
-        var dataURL = stage.toDataURL();
-        downloadURI(dataURL, 'stage.png');
-    }, false);*/
+/*document.getElementById('save').addEventListener('click', function () {
+    var dataURL = stage.toDataURL();
+    downloadURI(dataURL, 'stage.png');
+}, false);*/
