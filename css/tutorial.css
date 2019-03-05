@@ -1,19 +1,20 @@
-@font-face{
+@font-face {
   font-family: 'Sigmar One';
-  src : url('../font/SigmarOne-Regular.ttf');
+  src: url('../font/SigmarOne-Regular.ttf');
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-body,html {
-  width:  100%;
+body,
+html {
+  width: 100%;
   height: 100%;
-  overflow-y:hidden;
+  overflow-y: hidden;
   box-sizing: border-box;
   background: #558b2f;
   font-family: 'Sigmar One', cursive;
@@ -42,6 +43,12 @@ body,html {
   color: #ffd54f;
   background: rgba(212, 227, 138, .5);
   cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+#back_to_start:hover {
+  color: #e65100;
+  background: rgba(212, 227, 138, .8);
 }
 
 #back_to_start i {
@@ -151,17 +158,36 @@ body,html {
 
 
 @media only screen and (max-width: 1280px) {
-  #illustration_wrapper .step_container div.featured_image  {
+  #illustration_wrapper .step_container div.featured_image {
     height: 25rem;
     width: 70vw;
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  #back_to_start {
+    width: 7rem;
+
+  }
+
+  #back_to_start i {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    display: block;
+  }
+
+  #back_to_start div {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 960px) {
-  #illustration_wrapper .step_container div.featured_image  {
+  #illustration_wrapper .step_container div.featured_image {
     height: 20rem;
     width: 70vw;
   }
+
   .description {
     font-size: 1.5rem;
   }

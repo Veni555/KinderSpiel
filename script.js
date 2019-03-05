@@ -48,7 +48,7 @@ function changeFillStyle() {
 
 function draw(e) {
   xPos = e.clientX - canvas.offsetLeft;
-  yPos = e.clientY - canvas.offsetTop ;
+  yPos = e.clientY - canvas.offsetTop;
   if (down == true) {
     context.lineTo(xPos, yPos - 80);
     context.stroke();
@@ -776,6 +776,7 @@ function uploadEXGallery(phpDatei) {
 }
 
 
+
 /*    function downloadURI(uri, name) {
             var link = document.createElement("a");
             link.download = name;
@@ -785,7 +786,7 @@ function uploadEXGallery(phpDatei) {
             document.body.removeChild(link);
             delete link;
         }
- */
+  */
 
 
 /*document.getElementById('save').addEventListener('click', function () {

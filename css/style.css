@@ -1,24 +1,26 @@
-@font-face{
+@font-face {
   font-family: 'Sigmar One';
-  src : url('../font/SigmarOne-Regular.ttf');
+  src: url('../font/SigmarOne-Regular.ttf');
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   box-sizing: border-box;
 }
- body,html {
-  width:  100%;
+
+body,
+html {
+  width: 100%;
   height: 100%;
-  overflow-y:hidden;
+  overflow-y: hidden;
   box-sizing: border-box;
   background-color: #ffd54f;
   font-family: 'Sigmar One', cursive;
 }
 
-section{
+section {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -31,16 +33,16 @@ section{
   box-sizing: border-box;
 }
 
-canvas{
-  display:block;
+canvas {
+  display: block;
   /* border: 1px solid black; */
   width: calc(100vw - 20px);
   height: calc(100vh - 80px);
 }
 
-button{
-  outline:0;
-  border:0;
+button {
+  outline: 0;
+  border: 0;
 }
 
 /* ========= banner ========= */
@@ -50,26 +52,37 @@ button{
   height: 110px;
   display: block;
   position: relative;
-margin-bottom: 15px;
-    margin-left: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
   font-size: 2rem;
   font-family: 'Sigmar One', cursive;
   color: #b2dfdb;
   -webkit-text-stroke: 2px #3e2723;
-  /* vertical-align: middle; */
 }
 
-#banner img {
-  height: 80px;
-
+#logoLink {
+  display: inline-block;
+  width: 80px;
+  height: 100px;
+  background: url('../images/palette.png') no-repeat center center;
+  background-size: cover;
+  transition: all ease 0.3s;
+  cursor: pointer;
 }
+
+#logoLink:hover {
+  background: url('../images/homeIcon.png') no-repeat bottom center;
+}
+
 
 #banner h1 {
   display: inline-block;
+  position: absolute;
+  top: 30px;
   padding: 0 20px;
 }
 
-#design{
+#design {
   position: absolute;
   display: inline-block;
   height: 100%;
@@ -112,15 +125,21 @@ margin-bottom: 15px;
   /* размер и цвет границы блока */
   /* overflow-x: scroll; */
   /* прокрутка по горизонтали */
- overflow-y: scroll;
+  overflow-y: scroll;
   /* прокрутка по вертикали */
 
-scrollbar-base-color: yellow;	/*(Basisfarbe der Scroll-Leiste)*/
-scrollbar-arrow-color: #3e2723;	/*(Farbe für Verschiebepfeile)*/
-scrollbar-face-color: #ffd54f;	/*(Farbe für Oberfläche)*/
-scrollbar-highlight-color: #FFCC33;	/*(Farbe für oberen und linken Rand)*/
-scrollbar-shadow-color: #FFCC33;	/*(Farbe für unteren und rechten Rand)*/
-scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
+  scrollbar-base-color: yellow;
+  /*(Basisfarbe der Scroll-Leiste)*/
+  scrollbar-arrow-color: #3e2723;
+  /*(Farbe für Verschiebepfeile)*/
+  scrollbar-face-color: #ffd54f;
+  /*(Farbe für Oberfläche)*/
+  scrollbar-highlight-color: #FFCC33;
+  /*(Farbe für oberen und linken Rand)*/
+  scrollbar-shadow-color: #FFCC33;
+  /*(Farbe für unteren und rechten Rand)*/
+  scrollbar-track-color: #ffecb3;
+  /*(Farbe für freibleibenden Verschiebeweg)*/
 
 }
 
@@ -145,7 +164,7 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
 }
 
 #albummenubox a:hover {
-  color:#E74C3C;
+  color: #E74C3C;
   font-size: 1.6rem;
 }
 
@@ -165,7 +184,7 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
 
 /* == otherTools == */
 
-#otherTools{
+#otherTools {
   width: 30%;
   height: 95px;
   float: left;
@@ -175,7 +194,7 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   align-content: space-between;
 }
 
-#otherTools button{
+#otherTools button {
   flex-grow: 1;
   margin-right: 3px;
   height: 45px;
@@ -190,12 +209,13 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   cursor: pointer;
 }
 
-#upperTools, #lowerTools {
+#upperTools,
+#lowerTools {
   display: flex;
   justify-content: space-between;
 }
 
-#otherTools button:hover{
+#otherTools button:hover {
   opacity: 0.5;
 }
 
@@ -206,14 +226,14 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   border-radius: 100%;
 }
 
-#otherTools input{
+#otherTools input {
   margin-right: 3px;
   width: 70px;
   height: 45px;
   border: 3px solid #3e2723;
   border-radius: 5px;
   background-color: #ffecb3;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #otherTools button i {
@@ -224,14 +244,17 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   width: 8px;
   height: 8px;
 }
+
 #brushSize2 div {
   width: 15px;
   height: 15px;
 }
+
 #brushSize3 div {
   width: 23px;
   height: 23px;
 }
+
 #brushSize4 div {
   width: 30px;
   height: 30px;
@@ -240,14 +263,14 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
 
 /* == otherTools1 == */
 
-#otherTools1{
-  width:70%;
-  float:right;
+#otherTools1 {
+  width: 70%;
+  float: right;
   display: flex;
   justify-content: space-between;
 }
 
-#otherTools1 button{
+#otherTools1 button {
   width: auto;
   height: 45px;
   flex-grow: 1;
@@ -260,13 +283,13 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   cursor: pointer;
 }
 
-#otherTools1 button:hover{
+#otherTools1 button:hover {
   opacity: 0.5;
 }
 
 .downloadSetting {
   margin-top: 5px;
-  width:17.5%;
+  width: 17.5%;
   height: 45px;
   border: 3px solid #3e2723;
   border-radius: 5px;
@@ -275,7 +298,7 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
   font-family: 'Sigmar One', cursive;
   font-size: 1.3rem;
   cursor: pointer;
-  float:left;
+  float: left;
   visibility: hidden;
 }
 
@@ -286,39 +309,42 @@ scrollbar-track-color: #ffecb3; /*(Farbe für freibleibenden Verschiebeweg)*/
 
 
 div#thumbnailbox {
-  float:left;
+  float: left;
   color: #3e2723;
   background: #ffecb3;
 }
 
-div#thumbnailbox > div {
-  width:150px;
-  height:80px;
-  overflow:hidden;
-  cursor:pointer;
+div#thumbnailbox>div {
+  width: 150px;
+  height: 80px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-div#thumbnailbox > div > img {
-    width:100px;
+div#thumbnailbox>div>img {
+  width: 100px;
 }
 
 
-#clearCanvas{
-  font:25px impact;
+#clearCanvas {
+  font: 25px impact;
 }
 
-#fillCanvas{
-  font:25px impact;
-}
-#buttBrush,#squareBrush,#roundBrush{
-    font:18px existence;
+#fillCanvas {
+  font: 25px impact;
 }
 
-#otherTools #openFile{
-  font:25px existence;
+#buttBrush,
+#squareBrush,
+#roundBrush {
+  font: 18px existence;
 }
 
-#file{
+#otherTools #openFile {
+  font: 25px existence;
+}
+
+#file {
   visibility: hidden;
   width: 0px;
 }
@@ -363,7 +389,7 @@ a {
 #container {
   height: 100%;
   margin-right: -5px;
-	width: 70%;
+  width: 70%;
   float: right;
   background-color: #F8F8FF;
   border: none;
@@ -372,7 +398,7 @@ a {
 #zweite_spalte {
   margin-right: 3px;
   height: 100%;
-	background-color: #F8F8FF;
+  background-color: #F8F8FF;
   width: 30%;
   border: none;
 }
@@ -382,7 +408,3 @@ a {
   margin-bottom: 500px;
   margin-left: 250px;
 }
-
-
-
-
